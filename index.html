@@ -4,12 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sohan Store - Sonari, Jamshedpur</title>
-    <!-- Tailwind CSS CDN for modern UI -->
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-50 text-gray-800">
 
-    <!-- Header Section -->
     <header class="bg-green-700 text-white shadow-md sticky top-0 z-50">
         <div class="max-w-4xl mx-auto px-4 py-3 flex justify-between items-center">
             <div>
@@ -22,9 +20,7 @@
         </div>
     </header>
 
-    <!-- Main Container -->
     <main class="max-w-4xl mx-auto px-4 py-6 pb-24">
-        <!-- Store Banner / Info -->
         <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-100 mb-6 flex justify-between items-center">
             <div>
                 <h2 class="font-semibold text-lg">Daily Essentials & Groceries</h2>
@@ -33,85 +29,87 @@
             <a href="tel:08651565398" class="bg-green-50 text-green-700 border border-green-300 px-3 py-2 rounded-lg text-sm font-medium">📞 Call Now</a>
         </div>
 
-        <!-- Product Grid -->
         <h3 class="font-bold text-lg mb-4">Featured Products</h3>
-        <div class="grid grid-cols-2 sm:grid-cols-3 gap-4" id="product-list">
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
             
-            <!-- Item 1 -->
+            <!-- Aashirvaad Atta -->
             <div class="bg-white p-3 rounded-xl shadow-sm border border-gray-100 flex flex-col justify-between">
                 <div>
                     <div class="bg-gray-100 h-28 rounded-lg mb-2 flex items-center justify-center text-gray-400 text-xs">Product Image</div>
                     <h4 class="font-medium text-sm">Aashirvaad Atta (5kg)</h4>
                     <p class="text-xs text-gray-500 mt-1">₹240</p>
                 </div>
-                <button onclick="addToCart('Aashirvaad Atta (5kg)', 240)" class="mt-3 bg-green-700 text-white text-xs py-2 rounded-lg font-medium hover:bg-green-800 transition">Add to Cart</button>
+                <button onclick="addToCart('Aashirvaad Atta (5kg)', 240)" class="mt-3 bg-green-700 text-white text-xs py-2 rounded-lg font-medium">Add to Cart</button>
             </div>
 
-            <!-- Item 2 -->
+            <!-- Fortune Refined Oil -->
             <div class="bg-white p-3 rounded-xl shadow-sm border border-gray-100 flex flex-col justify-between">
                 <div>
                     <div class="bg-gray-100 h-28 rounded-lg mb-2 flex items-center justify-center text-gray-400 text-xs">Product Image</div>
                     <h4 class="font-medium text-sm">Fortune Refined Oil (1L)</h4>
                     <p class="text-xs text-gray-500 mt-1">₹140</p>
                 </div>
-                <button onclick="addToCart('Fortune Refined Oil (1L)', 140)" class="mt-3 bg-green-700 text-white text-xs py-2 rounded-lg font-medium hover:bg-green-800 transition">Add to Cart</button>
+                <button onclick="addToCart('Fortune Refined Oil (1L)', 140)" class="mt-3 bg-green-700 text-white text-xs py-2 rounded-lg font-medium">Add to Cart</button>
             </div>
 
-            <!-- Item 3 -->
+            <!-- Tata Salt -->
             <div class="bg-white p-3 rounded-xl shadow-sm border border-gray-100 flex flex-col justify-between">
                 <div>
                     <div class="bg-gray-100 h-28 rounded-lg mb-2 flex items-center justify-center text-gray-400 text-xs">Product Image</div>
                     <h4 class="font-medium text-sm">Tata Salt (1kg)</h4>
                     <p class="text-xs text-gray-500 mt-1">₹28</p>
                 </div>
-                <button onclick="addToCart('Tata Salt (1kg)', 28)" class="mt-3 bg-green-700 text-white text-xs py-2 rounded-lg font-medium hover:bg-green-800 transition">Add to Cart</button>
+                <button onclick="addToCart('Tata Salt (1kg)', 28)" class="mt-3 bg-green-700 text-white text-xs py-2 rounded-lg font-medium">Add to Cart</button>
+            </div>
+
+            <!-- Masoor Dal -->
+            <div class="bg-white p-3 rounded-xl shadow-sm border border-gray-100 flex flex-col justify-between">
+                <div>
+                    <div class="bg-gray-100 h-28 rounded-lg mb-2 flex items-center justify-center text-gray-400 text-xs">Product Image</div>
+                    <h4 class="font-medium text-sm">Masoor Dal (1kg)</h4>
+                    <p class="text-xs text-gray-500 mt-1">₹120</p>
+                </div>
+                <button onclick="addToCart('Masoor Dal (1kg)', 120)" class="mt-3 bg-green-700 text-white text-xs py-2 rounded-lg font-medium">Add to Cart</button>
+            </div>
+
+            <!-- Sugar -->
+            <div class="bg-white p-3 rounded-xl shadow-sm border border-gray-100 flex flex-col justify-between">
+                <div>
+                    <div class="bg-gray-100 h-28 rounded-lg mb-2 flex items-center justify-center text-gray-400 text-xs">Product Image</div>
+                    <h4 class="font-medium text-sm">Sugar (1kg)</h4>
+                    <p class="text-xs text-gray-500 mt-1">₹48</p>
+                </div>
+                <button onclick="addToCart('Sugar (1kg)', 48)" class="mt-3 bg-green-700 text-white text-xs py-2 rounded-lg font-medium">Add to Cart</button>
             </div>
 
         </div>
     </main>
 
-    <!-- Floating Cart Footer -->
     <div id="cart-footer" class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-4 shadow-lg hidden">
         <div class="max-w-4xl mx-auto flex justify-between items-center">
             <div>
-                <p class="text-xs text-gray-500">Items in Cart: <span id="cart-count" class="font-bold text-gray-800">0</span></p>
+                <p class="text-xs text-gray-500">Items: <span id="cart-count" class="font-bold">0</span></p>
                 <p class="text-sm font-bold text-green-700">Total: ₹<span id="cart-total">0</span></p>
             </div>
-            <button onclick="checkoutWhatsApp()" class="bg-emerald-600 text-white px-5 py-2.5 rounded-xl font-medium text-sm shadow-md hover:bg-emerald-700 transition flex items-center gap-2">
-                💬 Order on WhatsApp
-            </button>
+            <button onclick="checkoutWhatsApp()" class="bg-emerald-600 text-white px-5 py-2.5 rounded-xl font-medium text-sm shadow-md">💬 Order on WhatsApp</button>
         </div>
     </div>
 
-    <!-- JavaScript for Cart & WhatsApp Integration -->
     <script>
         let cart = [];
-
         function addToCart(name, price) {
             let item = cart.find(i => i.name === name);
-            if (item) {
-                item.qty += 1;
-            } else {
-                cart.push({ name, price, qty: 1 });
-            }
+            if (item) { item.qty += 1; } else { cart.push({ name, price, qty: 1 }); }
             updateCartUI();
         }
-
         function updateCartUI() {
             let count = cart.reduce((sum, i) => sum + i.qty, 0);
             let total = cart.reduce((sum, i) => sum + (i.price * i.qty), 0);
-            
             document.getElementById('cart-count').innerText = count;
             document.getElementById('cart-total').innerText = total;
-
             let footer = document.getElementById('cart-footer');
-            if (count > 0) {
-                footer.classList.remove('hidden');
-            } else {
-                footer.classList.add('hidden');
-            }
+            if (count > 0) { footer.classList.remove('hidden'); } else { footer.classList.add('hidden'); }
         }
-
         function checkoutWhatsApp() {
             let message = "Hi Sohan Store, mujhe ye saman chahiye:\n\n";
             let total = 0;
@@ -120,12 +118,8 @@
                 total += i.price * i.qty;
             });
             message += `\n*Total Amount: ₹${total}*`;
-            message += `\n\nDelivery Address: `;
-
             let encodedMessage = encodeURIComponent(message);
-            // Replace with your actual WhatsApp business number (with country code, e.g., 9198651565398)
-            let phone = "918651565398"; 
-            window.open(`https://wa.me/${phone}?text=${encodedMessage}`, '_blank');
+            window.location.href = `https://wa.me/918651565398?text=${encodedMessage}`;
         }
     </script>
 </body>
